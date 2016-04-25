@@ -316,8 +316,7 @@ public:
     if (lua_isnil (L, index))
       return 0;
     else
-      return static_cast <T*> (getClass (L, index,
-        ClassInfo <T>::getClassKey (), canBeConst)->getPointer ());
+        return static_cast <T*> (getClass (L, index, ClassInfo <T>::getClassKey (), canBeConst)->getPointer ());
   }
 };
 
